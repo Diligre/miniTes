@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="d1f1d7t9fiora1@ec2-54-217-204-34.eu-west-1.compute.amazonaws.com" uuid="f6c35040-015c-41ba-b1fa-fb7e4cce1f59">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d1f1d7t9fiora1</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="miniTesla@localhost" uuid="e7d1bfd0-8870-4658-94a0-7923390c809e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/miniTesla</jdbc-url>
+    </data-source>
+  </component>
+</project>
