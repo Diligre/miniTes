@@ -26,9 +26,9 @@ public class Interior implements Serializable {
     private Integer price;
 
     @Column(name = "description")
-    private String decription;
+    private String description;
 
-    @OneToMany(mappedBy = "interior")
+    @OneToMany(mappedBy = "interior",cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Car> cars;
 

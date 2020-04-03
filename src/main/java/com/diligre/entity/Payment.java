@@ -28,7 +28,7 @@ public class Payment implements Serializable {
     @Column(name = "cvv")
     private String cvv;
 
-    @OneToMany(mappedBy = "payment")
+    @OneToMany(mappedBy = "payment", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Customer> customers;
 

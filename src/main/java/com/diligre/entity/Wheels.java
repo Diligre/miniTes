@@ -23,7 +23,7 @@ public class Wheels implements Serializable {
     @Column(name = "price")
     private Integer price;
 
-    @OneToMany(mappedBy = "wheels")
+    @OneToMany(mappedBy = "wheels",cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Car> cars;
 

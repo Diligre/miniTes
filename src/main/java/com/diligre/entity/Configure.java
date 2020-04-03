@@ -26,7 +26,7 @@ public class Configure implements Serializable {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "configuration")
+    @OneToMany(mappedBy = "configuration",cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Car> cars;
 

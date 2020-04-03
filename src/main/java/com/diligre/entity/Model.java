@@ -23,7 +23,7 @@ public class Model implements Serializable {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "model")
+    @OneToMany(mappedBy = "model",cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Car> cars;
 

@@ -23,7 +23,7 @@ public class Color implements Serializable {
     @Column(name = "price")
     private Integer price;
 
-    @OneToMany(mappedBy = "color")
+    @OneToMany(mappedBy = "color",cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Car> cars;
 

@@ -15,23 +15,23 @@ public class Car implements Serializable {
     @SequenceGenerator(name = "car_id_seq",sequenceName = "car_id_seq",allocationSize = 1)
     private Long id;
 
-    @ManyToOne( cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "model")
     private Model model;
 
-    @ManyToOne( cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "configuration")
     private Configure configuration;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "color")
     private Color color;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "wheels")
     private Wheels wheels;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "interior")
     private Interior interior;
 
@@ -44,7 +44,7 @@ public class Car implements Serializable {
     @Column(name = "price")
     private Integer price;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "customer")
     private Customer customer;
 
