@@ -32,7 +32,7 @@ public class BillingInformation implements Serializable {
     @Column(name = "country")
     private String country;
 
-    @OneToMany(mappedBy = "billingInformation")
+    @OneToMany(mappedBy = "billingInformation", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Customer> customers;
 

@@ -1,5 +1,6 @@
 package com.diligre.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Generated;
 import org.springframework.context.annotation.Primary;
@@ -25,9 +26,10 @@ public class Interior implements Serializable {
     private Integer price;
 
     @Column(name = "description")
-    private String decription;
+    private String description;
 
-    @OneToMany(mappedBy = "interior")
+    @OneToMany(mappedBy = "interior",cascade = CascadeType.ALL)
+    @JsonIgnore
     private Set<Car> cars;
 
 }
