@@ -1,5 +1,6 @@
 package com.diligre.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class Model implements Serializable {
     private String description;
 
     @OneToMany(mappedBy = "model")
+    @JsonIgnore
     private Set<Car> cars;
 
 }

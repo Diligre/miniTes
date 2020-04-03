@@ -1,5 +1,6 @@
 package com.diligre.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Payment implements Serializable {
     private String cvv;
 
     @OneToMany(mappedBy = "payment")
+    @JsonIgnore
     private Set<Customer> customers;
 
 }

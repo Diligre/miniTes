@@ -1,5 +1,6 @@
 package com.diligre.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Generated;
 import org.springframework.context.annotation.Primary;
@@ -28,6 +29,7 @@ public class Interior implements Serializable {
     private String decription;
 
     @OneToMany(mappedBy = "interior")
+    @JsonIgnore
     private Set<Car> cars;
 
 }
