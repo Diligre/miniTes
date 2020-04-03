@@ -11,4 +11,6 @@ public class BulkDeleteDto {
 
         private List<Long> ids;
 
+        private List<String> cardNumbers;
+
 }
